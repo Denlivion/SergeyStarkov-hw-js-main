@@ -4,6 +4,25 @@
  * Результат сохраните в переменной grade.
  */
 
-const score = 70 // тестовое значение, можно изменять
+const score = (Math.floor(Math.random() * 101)) // тестовое значение, можно изменять
 let grade
 // your code
+
+
+if ((score >= 0) && (score<50)) {
+ grade = ('F')
+ console.log('You have ' + grade)
+ } else if ((score >= 50) && (score<70)) {
+ grade = ('D')
+ console.log('You have ' + grade)
+}
+else if ((score >= 70) && (score<80)){
+ grade = ('C')
+ console.log('You have ' + grade)
+}
+else if ((score >= 80) && (score<90)) {
+ grade = ('B')
+ console.log('You have ' + grade)
+}
+else
+ grade = ('A');
