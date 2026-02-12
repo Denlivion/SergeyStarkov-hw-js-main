@@ -4,9 +4,11 @@ function calculateAverage(num1, num2) {
     {
       let validateNum =  (num1 + num2)/2;
       console.log(validateNum)
+        return ((num1 + num2)/2)
     } else {
-        console.log('Пожалуйста, введи два произвольных числа, выше нуля!')
+        console.log('Пожалуйста, введи два произвольных числа выше нуля!')
+        return ('Пожалуйста, введи два произвольных числа выше нуля!')
     }
 }
 
-calculateAverage(2, 20)
+calculateAverage(0, 20)
