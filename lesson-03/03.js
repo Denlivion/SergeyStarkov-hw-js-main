@@ -2,15 +2,15 @@
 
 function findLargest(num1, num2, num3) {
     let largest
-    if ((num1>num2) && (num1>num3)) {
+    if ((num1>=num2) && (num1>=num3)) {
         largest = num1;
         }
 
-    else if ((num2>num1) && (num2>num3)) {
+    else if ((num2>=num1) && (num2>=num3)) {
         largest = num2;
         }
 
-    else if ((num3>num1) && (num3>num2)) {
+    else if ((num3>=num1) && (num3>=num2)) {
         largest = num3;
         }
         console.log(largest)
@@ -19,4 +19,4 @@ return (largest)
 }
 
 
-findLargest(90, 5, 8)
+findLargest(90, 90, 90)
