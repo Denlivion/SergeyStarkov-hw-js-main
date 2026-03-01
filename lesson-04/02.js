@@ -22,16 +22,27 @@ function findUniqueElements(array) {
     debugger
     let uniqueElementsArray = [];
     let elementToSearch
-
-    for (let i = 0; i<array.length; i++){
-        elementToSearch = array[i];
-        uniqueElementsArray.push(elementToSearch)
-        if(includesElement(uniqueElementsArray,elementToSearch )) {
-
+    for (let i = 0; i < array.length; i++){
+            elementToSearch = array[i];
+        if (!(includesElement(uniqueElementsArray, elementToSearch))) {
+            uniqueElementsArray.push(elementToSearch)
         }
+
+        console.log(uniqueElementsArray)
     }
 
-
-
     return uniqueElementsArray
+}
+findUniqueElements(someArray)
+
+function includesElement(array, element) {
+    let isInArray = false
+    for (let i = 0; i < array.length; i++) {
+        let argument = array[i];
+        if (argument === element) {
+            isInArray = true
+            console.log(argument)
+        }
+    }
+    return isInArray
 }
