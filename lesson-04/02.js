@@ -19,7 +19,6 @@
 const someArray = [1, 2, 3, 2, 1, 4]
 
 function findUniqueElements(array) {
-    debugger
     let uniqueElementsArray = [];
     let elementToSearch
     for (let i = 0; i < array.length; i++){
