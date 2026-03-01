@@ -15,12 +15,14 @@
 // let stringArray
 // let doubledString
 
-let doubledString = '';
+
 
 function doubleEachCharacter(someString) {
+    let doubledString = '';
     for (let i = 0; i < someString.length; i++){
-        doubledString+=(someString[i])
-        doubledString+=(someString[i])
+        doubledString+=(someString[i]);
+        doubledString+=(someString[i]);
+
     }
 
     console.log(doubledString)
@@ -39,4 +41,4 @@ function doubleEachCharacter(someString) {
     // return doubledString
 }
 
-doubleEachCharacter('hello',)
+doubleEachCharacter('hello')
