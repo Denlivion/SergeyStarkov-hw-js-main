@@ -12,20 +12,31 @@
 
 Пример работы функции: `doubleEachCharacter('hello')` вернёт `'hheelllloo'`
 */
-let stringArray
-let doubledString
+// let stringArray
+// let doubledString
+
+let doubledString = '';
 
 function doubleEachCharacter(someString) {
-    let permanentArray = [];
-    stringArray = someString.split('');
-    for (let i = 0; i < stringArray.length; i++){
-        permanentArray.push(stringArray[i])
-        permanentArray.push(stringArray[i])
-        doubledString = permanentArray.join('')
+    for (let i = 0; i < someString.length; i++){
+        doubledString+=(someString[i])
+        doubledString+=(someString[i])
     }
 
     console.log(doubledString)
     return doubledString
+
+
+    // let permanentArray = [];
+    // stringArray = someString.split('');
+    // for (let i = 0; i < stringArray.length; i++){
+    //     permanentArray.push(stringArray[i])
+    //     permanentArray.push(stringArray[i])
+    //     doubledString = permanentArray.join('')
+    // }
+    //
+    // console.log(doubledString)
+    // return doubledString
 }
 
-doubleEachCharacter('o-lo-lo',)
+doubleEachCharacter('**`str`**',)
