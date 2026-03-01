@@ -39,4 +39,4 @@ function doubleEachCharacter(someString) {
     // return doubledString
 }
 
-doubleEachCharacter('**`str`**',)
+doubleEachCharacter('hello',)
