@@ -32,7 +32,7 @@ const callback = ((element, index) => {
 const map = (array, cabak) => {
     const redArr = [];
     for (let i = 0; i < array.length; i++) {
-        redArr.push(cabak(array[i] + i))
+        redArr.push(cabak(array[i]))
     }
     return redArr
 }
