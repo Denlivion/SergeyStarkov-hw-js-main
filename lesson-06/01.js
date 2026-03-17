@@ -19,7 +19,7 @@
 // const oddNumbers = filter(numbers, (element, index) => {
 //   return element % 2 !== 0
 // });
-//
+
 // console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 
 
@@ -29,21 +29,17 @@ const callback = (element, index)  => {
     return element % 2 === 0
 }
 
-function filter (array, callback) {
+const filter = (array, callback) => {
     let newArray = []
     for (let i = 0; i < array.length; i++) {
         if(callback(array[i], i)){
             newArray.push(array[i])
         }
     }
-    console.log(newArray)
     return newArray
 }
 
-
-
-filter(numbers, callback);
-
+console.log(filter(numbers, callback))
 
 /////////////////////////////////////my callback training///////////////////////////////
 
