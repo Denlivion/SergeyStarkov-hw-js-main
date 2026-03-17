@@ -38,9 +38,6 @@ const map = (array, cabak) => {
         redArr.push(cabak(array[i]))
         }
     }
-    console.log(redArr)
     return redArr
 }
-
-
-map(numbers, callback)
+console.log(map(numbers, callback))
