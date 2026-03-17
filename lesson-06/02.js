@@ -23,16 +23,16 @@ const doubledNumbers = map(numbers, (element, index) => {
 
 console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
 */
-const numbers = [1, 2, 3, 4, 5]
+const numbers = ['a', 2, 'c', 4, 'd']
 
 const callback = ((element, index) => {
-    return element + 10
+    return element + index
 });
 
-const map = (array, cabak) => {
+const map = (array, callback) => {
     const redArr = [];
     for (let i = 0; i < array.length; i++) {
-        redArr.push(cabak(array[i]))
+        redArr.push(callback(array[i], i))
     }
     return redArr
 }
