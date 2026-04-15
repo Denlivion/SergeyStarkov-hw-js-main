@@ -24,9 +24,10 @@ function capitalizeWords(string) {
                 finalArray.push(newUpperCaseItem)
             }
         }
-        return  console.log(finalArray.join(' '))
+        return  finalArray.join(' ')
     }
     return iterateArrayElements(stringsArray)
 }
 
+console.log(capitalizeWords(str))
 capitalizeWords(str)
