@@ -13,7 +13,7 @@
 function truncate(str, maxLength) {
     let expandPhraseArray = [...str];
     let newArray = expandPhraseArray.filter((item, index) => (item, index < maxLength))
-    let result = (!(newArray.length < maxLength)) ? (newArray.join("")) + "..." : (newArray.join(""));
+    let result = ((expandPhraseArray.length < maxLength) || (expandPhraseArray.length === maxLength)) ? newArray.join("") : newArray.join("") + "...";
     return result
 }
-truncate("Вот, что мне действительно нравится в этом", 20)
+truncate("Короткая строка", 20)
