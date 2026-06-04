@@ -1,0 +1,19 @@
+/*
+* Напишите функцию truncate, которая принимает строку и максимальную длину.
+
+* Если длина строки превышает указанное количество символов,
+*  функция должна обрезать строку до этой длины и добавлять в конец многоточие (...).
+* В противном случае функция должна возвращать исходную строку.
+
+* Пример работы функции:
+* truncate("Вот, что мне действительно нравится в этом", 20) // Ожидаемый результат: "Вот, что мне действи..."
+* truncate("Короткая строка", 20) // Ожидаемый результат: "Короткая строка"
+*/
+
+function truncate(str, maxLength) {
+    let expandPhraseArray = [...str];
+    let newArray = expandPhraseArray.filter((item, index) => (item, index < maxLength))
+    let result = ((expandPhraseArray.length < maxLength) || (expandPhraseArray.length === maxLength)) ? newArray.join("") : newArray.join("") + "...";
+    return result
+}
+truncate("Короткая строка", 20)
