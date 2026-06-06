@@ -68,20 +68,15 @@ clearCartButton.addEventListener('click', function () {
 })
 
 // Твой код:
-const maxPetsInCart = 3
 petShop.addEventListener('click', function (event) {
 
   const petElement = event.target
   if (petElement.classList.contains('pet')) {
     function petGoesToCart(item) {
-      console.log(cart.length)
-      if (cart.length < maxPetsInCart) {
         cart.push(item.id)
         updateCartDisplay()
-        console.log(cart)
         return cart
       } else {
-        updateCartDisplay()
         return messageBox.textContent = 'Вы не можете добавить более 3 питомцев';
       }
     }
