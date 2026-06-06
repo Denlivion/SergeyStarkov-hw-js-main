@@ -73,11 +73,14 @@ petShop.addEventListener('click', function (event) {
   const petElement = event.target
   if (petElement.classList.contains('pet')) {
     function petGoesToCart(item) {
+      const maxPetsInCart = 3
+      if(cart.length < maxPetsInCart){
         cart.push(item.id)
         updateCartDisplay()
         return cart
       } else {
-        return messageBox.textContent = 'Вы не можете добавить более 3 питомцев';
+      updateCartDisplay()
+      return messageBox.textContent = 'Вы не можете добавить более 3 питомцев';
       }
     }
     petGoesToCart(petElement)
