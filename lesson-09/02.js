@@ -34,31 +34,41 @@ const cancelButton = document.getElementById('cancel')
 const countdownDisplay = document.getElementById('countdown')
 
 let launchCountdown = null
-let timeoutId
 
 startButton.addEventListener('click', () => {
-        clearInterval(launchCountdown)
-        console.log('timer is started')
-        let counter = 3
-        if (launchCountdown !== null) return;
-        countdownDisplay.textContent = `${counter}`
-        counter--
-        launchCountdown = setInterval(() => {
-            console.log(counter)
+    if (launchCountdown !== null) return;
+    clearInterval(launchCountdown)
+    // console.log('timer go')
+    let counter = 3
+    countdownDisplay.textContent = `${counter}`
+    counter--
+    launchCountdown = setInterval(() => {
+    if (counter > 0) {
             countdownDisplay.textContent = `${counter}`
             counter--
-                    countdownDisplay.textContent = '🚀'
-                    clearInterval(launchCountdown)
-                    launchCountdown = null
-        }, 1000)
-})
-
-    cancelButton.addEventListener('click', () => {
-        if (launchCountdown === null) return;
-        console.log('CANCEL TIMER')
+    } else {
+        countdownDisplay.textContent = '🚀'
         clearInterval(launchCountdown)
-        clearTimeout(timeoutId)
-        countdownDisplay.textContent = 'Отменено'
-        launchCountdown = null})
+        launchCountdown = null
+    }
+        }, 1000)
+
+    })
+
+            cancelButton.addEventListener('click', () => {
+                if (launchCountdown !== null){
+                    // console.log('cancel')
+                clearInterval(launchCountdown)
+                countdownDisplay.textContent = 'Отменено'
+                launchCountdown = null
+                }
+            })
+
+
+
+
+
+
+
 
 
