@@ -41,23 +41,17 @@ startButton.addEventListener('click', () => {
         console.log('timer is started')
         let counter = 3
         if (launchCountdown !== null) return;
-
-        if(counter > 0){
         countdownDisplay.textContent = `${counter}`
         counter--
         launchCountdown = setInterval(() => {
             console.log(counter)
             countdownDisplay.textContent = `${counter}`
             counter--
-        }, 1000)
-        } else {
-
                     countdownDisplay.textContent = '🚀'
                     clearInterval(launchCountdown)
                     launchCountdown = null
-
-            }
         }, 1000)
+})
 
     cancelButton.addEventListener('click', () => {
         if (launchCountdown === null) return;
@@ -65,6 +59,6 @@ startButton.addEventListener('click', () => {
         clearInterval(launchCountdown)
         clearTimeout(timeoutId)
         countdownDisplay.textContent = 'Отменено'
-        launchCountdown = null
-    })
+        launchCountdown = null})
+
 
